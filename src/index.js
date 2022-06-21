@@ -28,9 +28,9 @@ const rest = new REST({ version: '9' }).setToken(environment.discord.kToken);
     console.error(error);
   }
 
-  client.on('interactionCreate', (interaction) => {
+  client.on('interactionCreate', async (interaction) => {
     if (!interaction.isCommand()) return;
-    rsvp.handler(environment, client, interaction);
+    await rsvp.handler(environment, client, interaction);
   });
 
   client.on('ready', () => {
