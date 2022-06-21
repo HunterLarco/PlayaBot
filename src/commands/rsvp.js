@@ -38,8 +38,12 @@ async function handler(environment, client, interaction) {
           .setLabel('Going!')
           .setStyle('SUCCESS'),
         new MessageButton()
-          .setCustomId('no_going')
-          .setLabel('Not Going')
+          .setCustomId('remind')
+          .setLabel('Remind me next week')
+          .setStyle('SECONDARY'),
+        new MessageButton()
+          .setCustomId('not_going')
+          .setLabel('Not going')
           .setStyle('DANGER')
       ),
     ],

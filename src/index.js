@@ -29,8 +29,15 @@ const rest = new REST({ version: '9' }).setToken(environment.discord.kToken);
   }
 
   client.on('interactionCreate', async (interaction) => {
-    if (!interaction.isCommand()) return;
-    await rsvp.handler(environment, client, interaction);
+    if (interaction.isCommand()) {
+      await rsvp.handler(environment, client, interaction);
+    } else if (interaction.isButton()) {
+      await interaction.reply({ content: 'Success!', ephemeral: true });
+    } else {
+      console.error(
+        `Received unexpected interaction of type ${interaction.type}`
+      );
+    }
   });
 
   client.on('ready', () => {
