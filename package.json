@@ -1,0 +1,31 @@
+{
+  "name": "playabot",
+  "version": "0.0.0",
+  "description": "Manages camp functions for Take It Easy",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "prettier . --check",
+    "lint:fix": "prettier . --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunterlarco/playabot.git"
+  },
+  "author": "Hunter John Larco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunterlarco/playabot/issues"
+  },
+  "homepage": "https://github.com/hunterlarco/playabot#readme",
+  "dependencies": {
+    "@discordjs/rest": "0.5.0",
+    "discord-api-types": "0.34.0",
+    "discord.js": "13.8.0",
+    "express": "4.18.1"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
+}
